@@ -3,14 +3,14 @@ import streamlit as st
 import os
 
 # Obtener la ruta absoluta al archivo CSV
-csv_path = os.path.abspath('consumibles-miseq.csv')
+#csv_path = os.path.abspath('consumibles-miseq.csv')
 
 # Leer el archivo CSV
-consumibles_df = pd.read_csv(csv_path)
+#consumibles_df = pd.read_csv(csv_path)
 
 
 # Cargar los archivos CSV en DataFrames
-#consumibles_df = pd.read_csv('consumibles-miseq.csv')
+consumibles_df = pd.read_csv('consumibles-miseq.csv')
 equipamiento_df = pd.read_csv('equipamiento-miseq.csv')
 
 # Título para el costo parcial
