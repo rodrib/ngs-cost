@@ -29,9 +29,16 @@ Primero, busca ofrecer asesoramiento genético temprano para pacientes y sus fam
 El diagnóstico molecular de cáncer de mama/cáncer de ovario es posible a través de la identificación de variantes genéticas utilizando técnicas de secuenciación masiva (NGS). Este proyecto es destacado por ser pionero en el ámbito de la Salud Pública en Argentina, ya que propone la aplicación de un panel multigénico más extenso y preciso a un costo significativamente menor, asegurando la igualdad de acceso para la población en riesgo.
 """
 
+
+
+
 # Mostrar el resumen en la aplicación
 st.title("Justificación de los Equipos Pedidos")
 st.markdown(resumen_texto)
+
+# Cargar imagen desde un archivo local
+imagen_local = "ngs-pasos.jpg"  # Reemplaza con la ruta de tu imagen
+imagen = st.image(imagen_local, caption="Pasos en NGS", use_column_width=True)
 
 # ... (más código de tu aplicación)
 
