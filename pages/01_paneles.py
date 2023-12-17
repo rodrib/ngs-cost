@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import os
 
-df = pd.read_csv('pages\Paneles.csv')
+df = pd.read_csv('Paneles.csv')
 
 
 
