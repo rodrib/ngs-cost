@@ -40,6 +40,10 @@ st.markdown(resumen_texto)
 imagen_local = "ngs-pasos.jpg"  # Reemplaza con la ruta de tu imagen
 imagen = st.image(imagen_local, caption="Pasos en NGS", use_column_width=True)
 
+
+# Cargar imagen desde un archivo local
+imagen_renis = "Renis.jpeg"  # Reemplaza con la ruta de tu imagen
+imagen = st.image(imagen_renis, caption="RENIS", use_column_width=True)
 # ... (más código de tu aplicación)
 
 

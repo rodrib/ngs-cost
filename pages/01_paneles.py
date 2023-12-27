@@ -13,6 +13,8 @@ st.title("Visualizador de Paneles")
 # Botones para seleccionar el panel
 panel_seleccionado = st.radio("Selecciona un Panel:", ["Panel de Cáncer", "Panel de Desorden Metabólico"])
 
+
+
 # Espacio en blanco para mostrar las columnas seleccionadas
 espacio_columnas = st.empty()
 
@@ -57,3 +59,12 @@ if st.button("Comparar Paneles"):
     # Mostrar los resultados
     st.write(f"Genes comunes entre {panel_1} y {panel_2}: {genes_comunes}")
     st.write(f"Porcentaje de genes comunes: {porcentaje_genes_comunes:.2f}%")
+
+
+# Enlace como un botón
+url = "https://drive.google.com/file/d/1hRjufv3_1fKGw7aKqCKPEh6oOaXW3U1N/view?usp=drive_link"
+if st.button("Más Información"):
+    st.markdown(f"[Más Información]({url})", unsafe_allow_html=True)
+
+
+####
