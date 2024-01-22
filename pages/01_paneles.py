@@ -2,9 +2,9 @@ import pandas as pd
 import streamlit as st
 import os
 
-df = pd.read_csv('Paneles.csv')
+df = pd.read_csv('Paneles-2.csv')
 
-
+#df = pd.read_csv('Paneles-1.csv')
 
 
 # Título de la aplicación
@@ -22,7 +22,7 @@ espacio_columnas = st.empty()
 if st.button("Mostrar Paneles"):
     # Filtrar y mostrar las filas según la selección
     if panel_seleccionado == "Panel de Cáncer":
-        valores_a_mostrar = ["HC_38", "HC_55", "HC_117", "HC_144"]
+        valores_a_mostrar = ["HC_38", "HC_55", "HC_117", "HC_144","Cancer_Manlab","SOPHiA_DDMTM_HCS v2.0"]
     elif panel_seleccionado == "Panel de Desorden Metabólico":
         valores_a_mostrar = ["MD_40", "MD_50", "MD_9", "MD_70"]
     else:
@@ -53,6 +53,12 @@ if st.button("Comparar Paneles"):
     # Calcular los genes comunes
     genes_comunes = genes_panel_1.intersection(genes_panel_2)
 
+    # Calcular los genes exclusivos en el Panel 1
+    genes_exclusivos_panel_1 = genes_panel_1 - genes_comunes
+
+    # Calcular los genes exclusivos en el Panel 2
+    genes_exclusivos_panel_2 = genes_panel_2 - genes_comunes
+
     # Calcular el porcentaje de genes comunes
     porcentaje_genes_comunes = (len(genes_comunes) / len(genes_panel_1.union(genes_panel_2))) * 100
 
@@ -60,6 +66,15 @@ if st.button("Comparar Paneles"):
     st.write(f"Genes comunes entre {panel_1} y {panel_2}: {genes_comunes}")
     st.write(f"Porcentaje de genes comunes: {porcentaje_genes_comunes:.2f}%")
 
+    st.write("Genes exclusivos en el Panel 1:")
+    st.write(genes_exclusivos_panel_1)
+    st.write("Genes exclusivos en el Panel 2:")
+    st.write(genes_exclusivos_panel_2)
+
+
+resumen_panel = """En mas informacion se encuentra los detalles de los paneles """
+
+st.markdown(resumen_panel)
 
 # Enlace como un botón
 url = "https://drive.google.com/file/d/1hRjufv3_1fKGw7aKqCKPEh6oOaXW3U1N/view?usp=drive_link"
