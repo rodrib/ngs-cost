@@ -8,6 +8,13 @@ df = pd.read_csv('Paneles-2.csv')
 # Título de la aplicación
 st.title("Busqueda de Genes")
 
+# Texto explicativo
+st.markdown("""
+En esta sección, tendrás la opción de seleccionar un panel genómico específico. Al hacerlo, se mostrarán los genes asociados a ese panel. 
+Además, cada gen se presenta como un enlace interactivo. Al hacer clic en el nombre de un gen, se abrirá una nueva pestaña con su página correspondiente en GeneCards, 
+donde podrás obtener información detallada sobre su función y relevancia.
+""")
+
 # Botones para seleccionar el panel
 panel_seleccionado = st.radio("Selecciona un Panel:", ["HC_38", "HC_55", "HC_117", "HC_144","Cancer_Manlab","SOPHiA_DDMTM_HCS v2.0","MD_40", "MD_50","MD_9", "MD_70"])
 

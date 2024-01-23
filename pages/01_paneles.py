@@ -10,6 +10,15 @@ df = pd.read_csv('Paneles-2.csv')
 # Título de la aplicación
 st.title("Visualizador de Paneles")
 
+st.markdown("""
+Adicionalmente, te ofrecemos la posibilidad de comparar dos paneles genómicos. Al seleccionar esta opción, podrás elegir dos paneles distintos y visualizar de manera clara:
+- Los genes que ambos paneles comparten.
+- Los genes específicos del primer panel.
+- Los genes específicos del segundo panel.
+
+Esta herramienta facilita la identificación de similitudes y diferencias entre paneles, brindándote una visión detallada de los genes asociados a cada uno.
+""")
+
 # Botones para seleccionar el panel
 panel_seleccionado = st.radio("Selecciona un Panel:", ["Panel de Cáncer", "Panel de Desorden Metabólico"])
 
@@ -78,8 +87,15 @@ st.markdown(resumen_panel)
 
 # Enlace como un botón
 url = "https://drive.google.com/file/d/1hRjufv3_1fKGw7aKqCKPEh6oOaXW3U1N/view?usp=drive_link"
+url1 = "https://drive.google.com/file/d/1ONYZCDzC0shZuMgV0Nwj_Da358YXl6ZG/view?usp=sharing"
+url2 = "https://drive.google.com/file/d/1_qeljdBflXvuSV8_YwRG4A0lmONEi_V-/view?usp=sharing"
+
 if st.button("Más Información"):
-    st.markdown(f"[Más Información]({url})", unsafe_allow_html=True)
+    st.markdown(f"[Paneles de Sophia]({url})", unsafe_allow_html=True)
+    st.markdown(f"[HCS v2.0]({url1})", unsafe_allow_html=True)
+    st.markdown(f"[Protocolo elegido]({url2})", unsafe_allow_html=True)
+
+
 
 
 ####
