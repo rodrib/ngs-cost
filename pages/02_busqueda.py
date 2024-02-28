@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 # Cargar el DataFrame desde el archivo CSV
-df = pd.read_csv('Paneles-2.csv')
+df = pd.read_csv('Paneles-3.csv')
 
 # Título de la aplicación
 st.title("Busqueda de Genes")
@@ -16,7 +16,7 @@ donde podrás obtener información detallada sobre su función y relevancia.
 """)
 
 # Botones para seleccionar el panel
-panel_seleccionado = st.radio("Selecciona un Panel:", ["HC_38", "HC_55", "HC_117", "HC_144","Cancer_Manlab","SOPHiA_DDMTM_HCS v2.0","MD_40", "MD_50","MD_9", "MD_70"])
+panel_seleccionado = st.radio("Selecciona un Panel:", ["HC_38", "HC_55", "HC_117", "HC_144","Cancer_Manlab","SOPHiA_DDMTM_HCS v2.0","Devyser_HBOC_RUO_7","Devyser_BRCA","MD_40", "MD_50","MD_9", "MD_70"])
 
 
 

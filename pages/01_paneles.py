@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import os
 
-df = pd.read_csv('Paneles-2.csv')
+df = pd.read_csv('Paneles-3.csv')
 
 #df = pd.read_csv('Paneles-1.csv')
 
@@ -31,7 +31,7 @@ espacio_columnas = st.empty()
 if st.button("Mostrar Paneles"):
     # Filtrar y mostrar las filas según la selección
     if panel_seleccionado == "Panel de Cáncer":
-        valores_a_mostrar = ["HC_38", "HC_55", "HC_117", "HC_144","Cancer_Manlab","SOPHiA_DDMTM_HCS v2.0"]
+        valores_a_mostrar = ["HC_38", "HC_55", "HC_117", "HC_144","Cancer_Manlab","SOPHiA_DDMTM_HCS v2.0","Devyser_HBOC_RUO_7","Devyser_BRCA"]
     elif panel_seleccionado == "Panel de Desorden Metabólico":
         valores_a_mostrar = ["MD_40", "MD_50", "MD_9", "MD_70"]
     else:
