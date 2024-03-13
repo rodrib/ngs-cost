@@ -126,3 +126,27 @@ if st.button('Mostrar y Descargar Equipamiento MiSeq Devyser'):
         file_name='equipamiento_miseq.csv',
         key='equipamiento_download'
     )
+
+
+# Título para el costo parcial
+st.title('Costo Parcial Devyser')
+
+# Solicitar al usuario el costo de análisis de NGS
+#costo_analisis_ngs_dev = st.number_input('Ingrese el costo de análisis de NGS (en USD)')
+costo_analisis_ngs_dev = st.number_input('Ingrese el costo de análisis de NGS (en USD) ', key='input_dev')
+
+# Calcular la suma total de equipamiento MiSeq
+suma_total_equipamiento_dev = equipamiento_df_devyser['PRECIO TOTAL'].sum() + costo_analisis_ngs_dev
+suma_total_consumible_dev = consumibles_df_devyser['PRECIO TOTAL'].sum() + costo_analisis_ngs_dev
+suma_total_devyser = suma_total_equipamiento_dev + suma_total_consumible_dev
+
+# Obtener el número de pacientes
+num_pacientes = st.number_input('Ingrese el número de pacientes', key='input_pac')
+
+# Calcular el costo por paciente
+costo_por_paciente_dev = suma_total_devyser / num_pacientes
+
+# Mostrar la suma total de equipamiento y el costo por paciente
+st.write(f'Suma total de equipamiento MiSeq Devyser : {suma_total_devyser} USD')
+
+st.write(f'Costo por paciente de Devyser: {costo_por_paciente_dev} USD')

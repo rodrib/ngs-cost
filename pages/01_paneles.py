@@ -89,11 +89,18 @@ st.markdown(resumen_panel)
 url = "https://drive.google.com/file/d/1hRjufv3_1fKGw7aKqCKPEh6oOaXW3U1N/view?usp=drive_link"
 url1 = "https://drive.google.com/file/d/1ONYZCDzC0shZuMgV0Nwj_Da358YXl6ZG/view?usp=sharing"
 url2 = "https://drive.google.com/file/d/1_qeljdBflXvuSV8_YwRG4A0lmONEi_V-/view?usp=sharing"
+url3 = "https://drive.google.com/file/d/1VXfPo7Ws3-v8YKYFsLWBFum8JPQK-0us/view?usp=sharing"
+url4 = "https://drive.google.com/file/d/1NOe15QxrKnAyH-6nKUuFJe_7nWR4iaIu/view?usp=sharing"
+url5 = "https://docs.google.com/document/d/1f18DnsEwlJAqtpgp08nf11lhuy-ztC47/edit?usp=sharing&ouid=110056846763606760933&rtpof=true&sd=true"
 
 if st.button("Más Información"):
     st.markdown(f"[Paneles de Sophia]({url})", unsafe_allow_html=True)
     st.markdown(f"[HCS v2.0]({url1})", unsafe_allow_html=True)
-    st.markdown(f"[Protocolo elegido]({url2})", unsafe_allow_html=True)
+    st.markdown(f"[Protocolo Sophia en su momento]({url2})", unsafe_allow_html=True)
+    st.markdown(f"[Devyser BRCA]({url3})", unsafe_allow_html=True)
+    st.markdown(f"[Devyser HBOC]({url4})", unsafe_allow_html=True)
+    st.markdown(f"[Check list entrenamiento]({url5})", unsafe_allow_html=True)
+
 
 
 
