@@ -48,34 +48,34 @@ imagen = st.image(imagen_renis, caption="RENIS", use_column_width=True)
 
 
 # Título para el costo parcial
-st.title('Consumibles Miseq')
+st.title('Consumibles Miseq Sophia')
 # Crear botones para mostrar y descargar los DataFrames
-if st.button('Mostrar y Descargar Consumibles MiSeq'):
-    st.title('Consumibles MiSeq')
+if st.button('Mostrar y Descargar Consumibles MiSeq Sophia '):
+    st.title('Consumibles MiSeq Sophia ')
     st.write('Datos de consumibles:')
     st.write(consumibles_df)
     st.download_button(
-        label="Descargar Consumibles MiSeq",
+        label="Descargar Consumibles MiSeq Sophia ",
         data=consumibles_df.to_csv().encode('utf-8'),
         file_name='consumibles_miseq.csv',
         key='consumibles_download'
     )
 
 # Título para el costo parcial
-st.title('Equipamientos Miseq')
-if st.button('Mostrar y Descargar Equipamiento MiSeq'):
-    st.title('Equipamiento MiSeq')
+st.title('Equipamientos Miseq Sophia')
+if st.button('Mostrar y Descargar Equipamiento MiSeq Sophia'):
+    st.title('Equipamiento MiSeq Sophia Genetics')
     st.write('Datos de equipamiento:')
     st.write(equipamiento_df)
     st.download_button(
-        label="Descargar Equipamiento MiSeq",
+        label="Descargar Equipamiento MiSeq Sophia",
         data=equipamiento_df.to_csv().encode('utf-8'),
         file_name='equipamiento_miseq.csv',
         key='equipamiento_download'
     )
 
 # Título para el costo parcial
-st.title('Costo Parcial')
+st.title('Costo Parcial Sophia')
 
 # Solicitar al usuario el costo de análisis de NGS
 costo_analisis_ngs = st.number_input('Ingrese el costo de análisis de NGS (en USD)')
@@ -90,5 +90,39 @@ num_pacientes = st.number_input('Ingrese el número de pacientes')
 costo_por_paciente = suma_total_equipamiento / num_pacientes
 
 # Mostrar la suma total de equipamiento y el costo por paciente
-st.write(f'Suma total de equipamiento MiSeq: {suma_total_equipamiento} USD')
-st.write(f'Costo por paciente: {costo_por_paciente} USD')
+st.write(f'Suma total de equipamiento MiSeq Sophia Genetics : {suma_total_equipamiento} USD')
+
+st.write(f'Costo por paciente de Sophia Genetics: {costo_por_paciente} USD')
+
+########################
+
+# Cargar los archivos CSV en DataFrames
+consumibles_df_devyser = pd.read_csv('consumibles-devyser.csv')
+equipamiento_df_devyser = pd.read_csv('equipamiento-devyser.csv')
+
+# Título para el costo parcial
+st.title('Consumibles Miseq Devyser')
+# Crear botones para mostrar y descargar los DataFrames
+if st.button('Mostrar y Descargar Consumibles MiSeq Devyser '):
+    st.title('Consumibles MiSeq Devyser')
+    st.write('Datos de consumibles:')
+    st.write(consumibles_df_devyser)
+    st.download_button(
+        label="Descargar Consumibles MiSeq Devyser",
+        data=consumibles_df_devyser.to_csv().encode('utf-8'),
+        file_name='consumibles-devyser.csv',
+        key='consumibles_download'
+    )
+
+# Título para el costo parcial
+st.title('Equipamientos Miseq Devyser')
+if st.button('Mostrar y Descargar Equipamiento MiSeq Devyser'):
+    st.title('Equipamiento MiSeq Devyser')
+    st.write('Datos de equipamiento:')
+    st.write(equipamiento_df_devyser)
+    st.download_button(
+        label="Descargar Equipamiento MiSeq Devyser",
+        data=equipamiento_df_devyser.to_csv().encode('utf-8'),
+        file_name='equipamiento_miseq.csv',
+        key='equipamiento_download'
+    )
