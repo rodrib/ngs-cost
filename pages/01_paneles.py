@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import os
 
-df = pd.read_csv('Paneles-3.csv')
+df = pd.read_csv('Paneles-2 - Paneles-2.csv')
 
 #df = pd.read_csv('Paneles-1.csv')
 
